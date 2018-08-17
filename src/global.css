@@ -14,3 +14,10 @@
 ion-toolbar {
   --background: white;
 }
+
+:root {
+  --ion-safe-area-top: 22px;
+}
+:root.ios {
+  --ion-safe-area-bottom: 20px;
+}

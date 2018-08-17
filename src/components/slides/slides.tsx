@@ -1,6 +1,5 @@
 import { Component } from '@stencil/core';
 
-
 @Component({
   tag: 'page-slides',
   styleUrl: 'slides.css'
@@ -15,7 +14,7 @@ export class PageSlides {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen padding scrollEnabled={false}>
+      <ion-content fullscreen padding scrollY={false}>
         <ion-slides pager={false}>
 
           <ion-slide>

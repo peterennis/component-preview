@@ -1,10 +1,9 @@
 import { Component, Prop } from '@stencil/core';
 
-
 @Component({
   tag: 'page-modal'
 })
-export class modal {
+export class Modal {
   @Prop({ connect: 'ion-modal-controller' }) modalCtrl: HTMLIonModalControllerElement;
 
   async openModal(char: number) {
@@ -30,13 +29,13 @@ export class modal {
             Hobbits
           </ion-list-header>
 
-          <ion-item onClick={() => this.openModal(0)}>
+          <ion-item button onClick={() => this.openModal(0)}>
             Gollum
           </ion-item>
-          <ion-item onClick={() => this.openModal(1)}>
+          <ion-item button onClick={() => this.openModal(1)}>
             Frodo Baggins
           </ion-item>
-          <ion-item onClick={() => this.openModal(2)}>
+          <ion-item button onClick={() => this.openModal(2)}>
             Sam
           </ion-item>
         </ion-list>

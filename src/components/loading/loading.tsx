@@ -1,6 +1,5 @@
 import { Component, Prop } from '@stencil/core';
 
-
 @Component({
   tag: 'page-loading'
 })
@@ -12,10 +11,8 @@ export class PageLoading {
     const loading = await this.loadingCtrl.create({
       content: 'Please wait...',
       duration: 3000,
-      dismissOnPageChange: true
     });
-
-    loading.present();
+    await loading.present();
   }
 
   render() {
@@ -27,7 +24,7 @@ export class PageLoading {
       </ion-header>,
 
       <ion-content fullscreen padding>
-        <ion-button expand='block' onClick={() => this.presentLoading()}>Show Loading</ion-button>
+        <ion-button expand="block" onClick={() => this.presentLoading()}>Show Loading</ion-button>
       </ion-content>
     ];
   }
